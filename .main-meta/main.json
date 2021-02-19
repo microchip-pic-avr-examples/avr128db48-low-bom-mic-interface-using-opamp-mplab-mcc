@@ -7,7 +7,7 @@
         "version": "1.0.0",
         "displayName": "Low-BOM Microphone Interface Using the Analog Signal Conditioning (OPAMP) Peripheral",
         "projectName": "avr128db48-low-bom-mic-interface-using-opamp-mplab-mcc",
-        "shortDescription": "This Microchip MCC example in Low-BOM Microphone Interface Using the Analog Signal Conditioning (OPAMP) (AN3631) shows how to interface an electret microphone with a microcontroller (MCU) using the OPAMP. In addition to the microphone, only one resistor and one capacitor are required.",
+        "shortDescription": "This MCC based MPLAB X IDE example shows how to interface an electret microphone with a microcontroller (MCU) using the Analog Signal Conditioning (OPAMP). In addition to the microphone, only one resistor and one capacitor are required.",
         "ide": {
             "name": "MPLAB X",
             "semverRange": ">=5.40.0"
