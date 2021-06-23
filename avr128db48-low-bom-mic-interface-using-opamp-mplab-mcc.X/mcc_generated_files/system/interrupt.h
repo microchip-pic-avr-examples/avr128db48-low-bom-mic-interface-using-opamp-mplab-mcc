@@ -1,8 +1,17 @@
+/**
+  @Company
+    Microchip Technology Inc.
+
+  @Description
+    This Source file provides APIs.
+    Generation Information :
+    Driver Version    :   1.0.0
+*/
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
-    
+
     All rights reserved.
-    
+
     You are permitted to use the accompanying software and its derivatives 
     with Microchip products. See the Microchip license agreement accompanying 
     this software, if any, for additional info regarding your rights and 
@@ -31,17 +40,26 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     third party licenses prohibit any of the restrictions described here, 
     such restrictions will not apply to such third party software.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
-*/
 
-int main(void)
-{
-    SYSTEM_Initialize();
+#ifndef INTERRUPT_H
+#define INTERRUPT_H
 
-    while(1)
-    {
-    }
+#include "../system/utils/compiler.h"
+#include "ccp.h"
+#include "../system/utils/atomic.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif /**                                                                                                             \
+  * \brief Initialize cpuint interface                                                                                 \
+  *                                                                                                                    \
+  * \return Initialization status                                                                                      \
+  */
+int8_t CPUINT_Initialize();
+
+#ifdef __cplusplus
 }
+#endif
+
+#endif /* INTERRUPT_H */

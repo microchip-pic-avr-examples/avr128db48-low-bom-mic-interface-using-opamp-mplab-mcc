@@ -1,8 +1,17 @@
+/**
+  @Company
+    Microchip Technology Inc.
+
+  @Description
+    This Source file provides APIs.
+    Generation Information :
+    Driver Version    :   1.0.0
+*/
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
-    
+
     All rights reserved.
-    
+
     You are permitted to use the accompanying software and its derivatives 
     with Microchip products. See the Microchip license agreement accompanying 
     this software, if any, for additional info regarding your rights and 
@@ -31,17 +40,33 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     third party licenses prohibit any of the restrictions described here, 
     such restrictions will not apply to such third party software.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
-*/
 
-int main(void)
-{
-    SYSTEM_Initialize();
+/**
+ * \defgroup doc_driver_utils AVR Code utility functions
+ *
+ * Compiler abstraction layer and code utilities for AVR.
+ * This module provides various abstraction layers and utilities
+ * to make code compatible between different compilers.
+ *
+ * \{
+ */
 
-    while(1)
-    {
-    }
+#ifndef UTILS_H_INCLUDED
+#define UTILS_H_INCLUDED
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/**
+ * \brief Retrieve array size
+ */
+#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
+
+/** @} */
+
+#ifdef __cplusplus
 }
+#endif
+#endif /* UTILS_H_INCLUDED */

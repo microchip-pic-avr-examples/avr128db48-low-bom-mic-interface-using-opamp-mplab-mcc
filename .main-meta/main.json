@@ -4,27 +4,27 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.avr128db48-low-bom-mic-interface-using-opamp-mplab-mcc",
-        "version": "1.0.0",
+        "version": "2.0.0",
         "displayName": "Low-BOM Microphone Interface Using the Analog Signal Conditioning (OPAMP) Peripheral",
         "projectName": "avr128db48-low-bom-mic-interface-using-opamp-mplab-mcc",
-        "shortDescription": "This MCC based MPLAB X IDE example shows how to interface an electret microphone with a microcontroller (MCU) using the Analog Signal Conditioning (OPAMP). In addition to the microphone, only one resistor and one capacitor are required.",
+        "shortDescription": "This MPLAB X Melody example shows how to interface an electret microphone with a microcontroller (MCU) using the Analog Signal Conditioning (OPAMP). In addition to the microphone, only one resistor and one capacitor are required.",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ">=5.40.0"
+            "semverRange": ">=5.50.0"
         },
         "compiler": [
 			{
 				"name": "XC8",
-				"semverRange": "^2.31.0"
+				"semverRange": "^2.32.0"
 			}
 		],
         "dfp": {
             "name": "AVR-Dx_DFP",
-            "semverRange": "^1.6.88"
+            "semverRange": "^1.8.112"
         },
         "configurator": {
             "name": "MCC",
-            "semverRange": ">=4.0.0"
+            "semverRange": ">=4.1.0"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -37,7 +37,7 @@
             }
         },
         "author": "Lloyd Clark",
-        "subcategories": [ "MCC",
+        "subcategories": [
             [
                "Peripherals", "OPAMP"
             ],
@@ -46,10 +46,7 @@
             ],
 			[
                "Peripherals", "AC"
-            ],
-            [
-               "Development Kit", "AVR128DB48 Curiosity Nano"
-            ]            					
+            ]
         ],
         "peripherals": [
             "OPAMP", "ADC", "AC"
@@ -64,7 +61,9 @@
 			"Programmable Gain Amplifiers",
 			"Low BOM",
 			"PGA",
-			"low-bom-mic-interface-using-opamp"
+			"low-bom-mic-interface-using-opamp",
+			"Melody",
+			"Curiosity Nano"
         ],
 		"additionalData": {
 			"longDescription": {

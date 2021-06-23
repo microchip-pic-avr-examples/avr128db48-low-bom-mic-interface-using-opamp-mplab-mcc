@@ -1,8 +1,17 @@
+/**
+  @Company
+    Microchip Technology Inc.
+
+  @Description
+    This Source file provides APIs.
+    Generation Information :
+    Driver Version    :   1.0.0
+*/
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
-    
+
     All rights reserved.
-    
+
     You are permitted to use the accompanying software and its derivatives 
     with Microchip products. See the Microchip license agreement accompanying 
     this software, if any, for additional info regarding your rights and 
@@ -31,17 +40,44 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     third party licenses prohibit any of the restrictions described here, 
     such restrictions will not apply to such third party software.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
-*/
 
-int main(void)
-{
-    SYSTEM_Initialize();
+/**
+ * \defgroup doc_driver_utils_assert Functionality for assert.
+ * \ingroup doc_driver_utils
+ *
+ * \{
+ */
 
-    while(1)
-    {
-    }
+#ifndef _ASSERT_H_INCLUDED
+#define _ASSERT_H_INCLUDED
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdbool.h>
+
+/**
+ * \brief Assert macro
+ *
+ * This macro is used to throw asserts. It can be mapped to different function
+ * based on debug level.
+ *
+ * \param[in] condition A condition to be checked;
+ *                      assert is thrown if the given condition is false
+ */
+
+#ifdef DEBUG
+#define ASSERT(condition)                                                                                              \
+	if (!(condition))                                                                                                  \
+		while (true)                                                                                                   \
+			;
+#else
+#define ASSERT(condition) ((void)0)
+#endif
+
+#ifdef __cplusplus
 }
+#endif
+#endif /* _ASSERT_H_INCLUDED */

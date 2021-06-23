@@ -1,8 +1,17 @@
+/**
+  @Company
+    Microchip Technology Inc.
+
+  @Description
+    This Source file provides APIs.
+    Generation Information :
+    Driver Version    :   1.0.0
+*/
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
-    
+
     All rights reserved.
-    
+
     You are permitted to use the accompanying software and its derivatives 
     with Microchip products. See the Microchip license agreement accompanying 
     this software, if any, for additional info regarding your rights and 
@@ -31,17 +40,21 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     third party licenses prohibit any of the restrictions described here, 
     such restrictions will not apply to such third party software.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
-*/
 
-int main(void)
+#include <avr/io.h>
+
+/**
+ * Configures Fuse bits
+ */
+
+FUSES = 
 {
-    SYSTEM_Initialize();
-
-    while(1)
-    {
-    }
-}
+  .BODCFG = ACTIVE_DISABLE_gc | LVL_BODLEVEL0_gc | SAMPFREQ_128Hz_gc | SLEEP_DISABLE_gc,
+  .BOOTSIZE = 0x0,
+  .CODESIZE = 0x0,
+  .OSCCFG = CLKSEL_OSCHF_gc,
+  .SYSCFG0 = CRCSEL_CRC16_gc | CRCSRC_NOCRC_gc | RSTPINCFG_GPIO_gc,
+  .SYSCFG1 = MVSYSCFG_DUAL_gc | SUT_0MS_gc,
+  .WDTCFG = PERIOD_OFF_gc | WINDOW_OFF_gc,
+};
