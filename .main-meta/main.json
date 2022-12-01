@@ -2,7 +2,7 @@
     "metaDataVersion": "1.0.0",
     "category": "com.microchip.ide.project",
     "content": {
-        "metaDataVersion": "1.1.0",
+        "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.avr128db48-low-bom-mic-interface-using-opamp-mplab-mcc",
         "version": "2.0.0",
         "displayName": "Low-BOM Microphone Interface Using the Analog Signal Conditioning (OPAMP) Peripheral",
@@ -37,17 +37,6 @@
             }
         },
         "author": "Lloyd Clark",
-        "subcategories": [
-            [
-               "Peripherals", "OPAMP"
-            ],
-			[
-               "Peripherals", "ADC"
-            ],
-			[
-               "Peripherals", "AC"
-            ]
-        ],
         "peripherals": [
             "OPAMP", "ADC", "AC"
         ],
