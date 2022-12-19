@@ -41,16 +41,14 @@
             "OPAMP", "ADC", "AC"
         ],
         "keywords": [
-			"Analog Signal Conditioning",
+			"Signal Conditioning",
 			"Operational Amplifier",
 			"Op Amp",
 			"Resistor Ladder",
-			"Electret Microphone",
-			"Adjustable Gain",
-			"Programmable Gain Amplifiers",
+			"Gain",
+			"PGA",
 			"Low BOM",
 			"PGA",
-			"low-bom-mic-interface-using-opamp",
 			"Melody",
 			"Curiosity Nano"
         ],
